@@ -48,7 +48,7 @@ func CleanNonAlphaNumeric(input [][]string) [][]string {
 func RemoveEmptyLines(input [][]string) [][]string {
 	var result [][]string
 	for _, element := range input {
-		if len(element) > 0 {
+		if len(element) > 0 && !(len(element) == 1 && element[0] == "") {
 			result = append(result, element)
 		}
 	}

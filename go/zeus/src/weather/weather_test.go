@@ -6,7 +6,7 @@ import (
 )
 
 func TestHeadersParseFile(t *testing.T) {
-	expected := []int{14, 2}
+	expected := []string{"14", "2"}
 	minSpreads := MinimumSpread("../../weather.dat")
 	if reflect.DeepEqual(minSpreads, expected) {
 		t.Fatalf("Expected: %v\n Got: %v\n", expected, minSpreads)
